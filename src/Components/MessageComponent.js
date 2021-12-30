@@ -17,7 +17,11 @@ export default class extends Component {
           onChangeText={(message) => this.setState({ message })}
         ></TextInput>
         <View style={styles.buttonView}>
-          <Button title="返回" color="red"></Button>
+          <Button
+            title="返回"
+            color="red"
+            onPress={this.props.navigation.goBack}
+          ></Button>
           <Button title="儲存" onPress={this.saveMessage}></Button>
         </View>
       </SafeAreaView>
